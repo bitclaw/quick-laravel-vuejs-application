@@ -21,6 +21,12 @@ composer create-project laravel/laravel ~/projects/github/bitclaw/quick-laravel-
 php artisan ide-helper:generate
 ```
 
+## Authentication scaffolding
+
+```shell
+php artisan make:auth
+```
+
 ### Commands to get database and migrations / seeds setup
 
 ```shell
