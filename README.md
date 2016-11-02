@@ -39,6 +39,18 @@ php artisan db:seed --class=UserTableSeeder
 php artisan migrate:refresh --seed
 ```
 
+## Errors
+
+[ReflectionException]
+Class UserTableSeeder does not exist
+
+This is solved with the following commands:
+
+```shell
+composer update
+composer dump-autoload
+```
+
 ### Use built-in web server for Laravel App (http://localhost:8000)
 
 ```shell
