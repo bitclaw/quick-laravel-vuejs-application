@@ -1,0 +1,19 @@
+{
+  "name": "quick-laravel-vuejs-application",
+  "version": "1.0.0",
+  "description": "Quick Laravel VueJS application",
+  "author": "Daniel Chavez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitclaw/quick-laravel-vuejs-application.git"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "laravel-elixir": "^6.0.0-11",
+    "laravel-elixir-vueify": "^2.0.0"
+  }
+}
