@@ -19,4 +19,6 @@ bootstrap/cache/
 Homestead.json
 Homestead.yaml
 /public/css/*.css
+/public/css/*.map
 /public/js/*.js
+
