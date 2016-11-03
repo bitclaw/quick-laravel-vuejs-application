@@ -5,12 +5,13 @@ Quick Laravel VueJS Application
 ### Setup application and test
 
 ```shell
-npm install -g gulp
+npm install -g gulp karma-cli
 npm install
 php artisan migrate:refresh --seed --force
 gulp
 php artisan serve --port=8000
 vendor/bin/phpunit
+karma start
 ```
 
 ### Create Laravel 5 project with the following command:
