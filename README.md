@@ -66,6 +66,17 @@ mkdir bootstrap/cache
 sudo chmod 777 -R bootstrap/cache
 ```
 
+```shell
+ErrorException in helpers.php line 410:
+File css/app.css not defined in asset manifest.
+```
+
+This is solved with the following commands (run in project root):
+
+```shell
+gulp
+```
+
 ### Use built-in web server for Laravel App (http://localhost:8000)
 
 ```shell
