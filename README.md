@@ -84,6 +84,14 @@ This is solved with the following commands (run in project root):
 gulp
 ```
 
+## Debugging Karma configuration error
+
+Run Karma with the following flags:
+
+```shell
+karma start karma.config.js --log-level debug --single-run
+```
+
 ### Use built-in web server for Laravel App (http://localhost:8000)
 
 ```shell

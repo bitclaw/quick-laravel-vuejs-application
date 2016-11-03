@@ -11,7 +11,7 @@ module.exports = function(config) {
         logLevel: config.LOG_INFO, // possible values: config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO, config.LOG_DEBUG
         reporters: ['progress', 'coverage'],
         autoWatch: false, // enable / disable watching files & then run tests
-        browsers: ['PhantomJS'], //'PhantomJS', 'Firefox', 'Chrome'
+        browsers: ['Chrome'], //'PhantomJS', 'Firefox', 'Chrome'
         // Continuous Integration mode
         singleRun: false, // if true, Karma captures browsers, runs the tests and exits
         concurrency: Infinity, // how many browser should be started simultaneous
