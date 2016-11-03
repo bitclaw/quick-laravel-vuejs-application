@@ -26,6 +26,6 @@
             debug: function () {
                 console.debug('Loaded admin dashboard')
             }
-        },
+        }
     };
 </script>
