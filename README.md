@@ -27,6 +27,13 @@ php artisan ide-helper:generate
 php artisan make:auth
 ```
 
+## Cache and config clearing commands
+
+```shell
+php artisan config:cache
+php artisan cache:clear
+```
+
 ### Commands to get database and migrations / seeds setup
 
 ```shell
