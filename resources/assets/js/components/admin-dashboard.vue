@@ -1,4 +1,4 @@
-<style scoped>
+<style scoped lang="">
 </style>
 
 <template>
@@ -17,15 +17,7 @@
 
 <script>
     export default {
-        data: function () {
-            return {};
-        },
-        ready: function () {
-        },
-        methods: {
-            debug: function () {
-                console.debug('Loaded admin dashboard')
-            }
-        }
-    };
+        mounted() {
+        console.log('Component ready.')
+    }
 </script>

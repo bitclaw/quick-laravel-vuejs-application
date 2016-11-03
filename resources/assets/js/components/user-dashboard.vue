@@ -17,15 +17,7 @@
 
 <script>
     export default {
-        data: function () {
-            return {};
-        },
-        ready: function () {
-        },
-        methods: {
-            debug: function () {
-                console.debug('Loaded user dashboard')
-            }
-        }
-    };
+        mounted() {
+        console.log('Component ready.')
+    }
 </script>
