@@ -5,8 +5,7 @@ Quick Laravel VueJS Application
 ### Setup application and test
 
 ```shell
-npm install -g gulp bower
-bower install
+npm install -g gulp
 npm install
 php artisan migrate:refresh --seed --force
 gulp
@@ -25,6 +24,13 @@ php artisan ide-helper:generate
 
 ```shell
 php artisan make:auth
+```
+
+## Cache and config clearing commands
+
+```shell
+php artisan config:cache
+php artisan cache:clear
 ```
 
 ### Commands to get database and migrations / seeds setup
@@ -64,6 +70,17 @@ This is solved with the following commands (run in project root):
 ```shell
 mkdir bootstrap/cache
 sudo chmod 777 -R bootstrap/cache
+```
+
+```shell
+ErrorException in helpers.php line 410:
+File css/app.css not defined in asset manifest.
+```
+
+This is solved with the following commands (run in project root):
+
+```shell
+gulp
 ```
 
 ### Use built-in web server for Laravel App (http://localhost:8000)
