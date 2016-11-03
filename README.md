@@ -41,14 +41,29 @@ php artisan migrate:refresh --seed
 
 ## Errors
 
+```shell
 [ReflectionException]
 Class UserTableSeeder does not exist
+```
 
-This is solved with the following commands:
+This is solved with the following commands (run in project root):
 
 ```shell
 composer update
 composer dump-autoload
+```
+
+```shell
+[ErrorException]                                                                                                                                  
+file_put_contents(/var/www/local/quick-laravel-vuejs-application/bootstrap/cache/services.php):
+failed to open stream: No such file or directory
+```
+
+This is solved with the following commands (run in project root):
+
+```shell
+mkdir bootstrap/cache
+sudo chmod 777 -R bootstrap/cache
 ```
 
 ### Use built-in web server for Laravel App (http://localhost:8000)
