@@ -8,8 +8,8 @@ module.exports = function(config) {
         frameworks: ['jasmine'],
         port: 9876, // web server port
         colors: true,
-        logLevel: config.LOG_INFO, //
-        reporters: ['progress', 'coverage'], // possible values: config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO, config.LOG_DEBUG
+        logLevel: config.LOG_INFO, // possible values: config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO, config.LOG_DEBUG
+        reporters: ['progress', 'coverage'],
         autoWatch: false, // enable / disable watching files & then run tests
         browsers: ['PhantomJS'], //'PhantomJS', 'Firefox', 'Chrome'
         // Continuous Integration mode
