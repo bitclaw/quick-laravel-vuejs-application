@@ -5,7 +5,7 @@ Quick Laravel VueJS Application
 ### Setup application and test
 
 ```shell
-npm install -g gulp karma-cli
+npm install -g gulp karma-cli vue-cli
 npm install
 php artisan migrate:refresh --seed --force
 gulp
@@ -81,7 +81,18 @@ File css/app.css not defined in asset manifest.
 This is solved with the following commands (run in project root):
 
 ```shell
-gulp
+gulpvue-cli
+```
+
+```shell
+exception 'RuntimeException' with message 'The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+```
+
+This is solved by running the following commands:
+
+```shell
+php artisan key:generate
+php artisan config:clear
 ```
 
 ## Debugging Karma configuration error
