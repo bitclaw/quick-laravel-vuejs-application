@@ -5,27 +5,17 @@ delete webpackConf.entry;
 
 module.exports = function(config) {
     config.set({
-
         frameworks: ['jasmine'],
-
         port: 9876, // web server port
-
         colors: true,
-
-        logLevel: config.LOG_INFO,
-
-        reporters: ['progress'], // dots, progress
-
-        autoWatch: true, // enable / disable watching files & then run tests
-
-        browsers: ['Chrome'], //'PhantomJS', 'Firefox',
-
-        singleRun: true, // if true, Karma captures browsers, runs the tests and exits
-
+        logLevel: config.LOG_INFO, //
+        reporters: ['progress', 'coverage'], // possible values: config.LOG_DISABLE, config.LOG_ERROR, config.LOG_WARN, config.LOG_INFO, config.LOG_DEBUG
+        autoWatch: false, // enable / disable watching files & then run tests
+        browsers: ['PhantomJS'], //'PhantomJS', 'Firefox', 'Chrome'
+        // Continuous Integration mode
+        singleRun: false, // if true, Karma captures browsers, runs the tests and exits
         concurrency: Infinity, // how many browser should be started simultaneous
-
         webpack: webpackConf, // Pass your webpack.config.js file's content
-
         webpackMiddleware: {
             noInfo: true,
             stats: 'errors-only'
