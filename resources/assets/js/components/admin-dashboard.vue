@@ -1,4 +1,4 @@
-<style scoped lang="">
+<style scoped lang="sass">
 </style>
 
 <template>
@@ -18,9 +18,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component ready.')
-        },
-        data() {
-            return { test: '# Hello!' }
-        },
+            console.log('Admin component ready.')
+        }
+    }
 </script>
