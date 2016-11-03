@@ -1,6 +1,7 @@
-const elixir = require('laravel-elixir');
-
-require('laravel-elixir-vue-2');
+var elixir = require('laravel-elixir');
+elixir.config.js.browserify.watchify.options.poll = true;
+require('laravel-elixir-vueify');
+require('laravel-elixir-livereload');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,11 +14,10 @@ require('laravel-elixir-vue-2');
  |
  */
 
-elixir(mix => {
-    mix
-        .sass('app.scss')
-        .webpack('app.js')
-        .browserSync({
-            proxy: 'vuejs-demo.dev'
-        });
+elixir(function(mix) {
+    mix.sass('app.scss');
+    mix.browserify('app.js');
+    mix.browserify('bootstrap.js');
+    mix.version(['public/js/app.js', 'public/js/bootstrap.js', 'public/css/app.css']);
+    mix.livereload();
 });
