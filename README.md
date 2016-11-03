@@ -5,8 +5,7 @@ Quick Laravel VueJS Application
 ### Setup application and test
 
 ```shell
-npm install -g gulp bower
-bower install
+npm install -g gulp
 npm install
 php artisan migrate:refresh --seed --force
 gulp
