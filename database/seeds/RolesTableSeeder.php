@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
-class RolesSeeder extends Seeder {
+class RolesTableSeeder extends Seeder {
     /**
      * Run the database seeds.
      *
@@ -10,9 +11,6 @@ class RolesSeeder extends Seeder {
      */
     public function run()
     {
-
-        DB::table('roles')->truncate();
-
         $user = [
             'name' => 'User',
             'level' => 1
