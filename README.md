@@ -7,6 +7,8 @@ Quick Laravel VueJS Application
 ```shell
 npm install -g gulp karma-cli
 npm install
+composer install
+php artisan migrate:reset
 php artisan migrate:refresh --seed --force
 gulp
 php artisan serve --port=8000
