@@ -11,27 +11,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert(
-            [
-                [
-                    'name' => str_random(10),
-                    'email' => str_random(10).'@gmail.com',
-                    'password' => bcrypt('Temporal01'),
-                    'is_admin' => true,
-                    'remember_token' => null,
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                ],
-                [
-                    'name' => str_random(10),
-                    'email' => str_random(10).'@gmail.com',
-                    'password' => bcrypt('Temporal01'),
-                    'is_admin' => false,
-                    'remember_token' => null,
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                ]
-            ]
-        );
+        DB::table('users')->truncate();
+
+        factory(App\User::class, 2)->create();
+        $admin = factory(App\User::class, 'admin')->create();
+        $this->command->info("New Admin has been created. Username: $admin->email,  Password: Temporal01");
     }
 }
