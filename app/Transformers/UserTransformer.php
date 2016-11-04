@@ -33,7 +33,6 @@ class UserTransformer extends TransformerAbstract
         return [
             'name'     => $user->name,
             'username' => $user->username,
-            'avatar'   => $user->avatar,
             'email'    => $user->email
         ];
     }
