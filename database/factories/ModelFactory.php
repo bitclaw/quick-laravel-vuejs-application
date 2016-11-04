@@ -12,12 +12,25 @@
 */
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
     return [
         'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'username' => $faker->username,
+        'email' => $faker->safeEmail,
+        'role_level' => 1,
+        'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->defineAs(App\User::class, 'admin', function () use ($factory) {
+    $user = $factory->raw(App\User::class);
+
+    return array_merge($user, ['role_level' => 2, 'password' => bcrypt('123pass')]);
+});
+
+$factory->define(App\Role::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word,
+        'level' => 1,
     ];
 });
