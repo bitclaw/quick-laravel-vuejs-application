@@ -29,6 +29,7 @@
     "laravel-elixir": "^5.0.0",
     "laravel-elixir-livereload": "^1.1.5-beta",
     "laravel-elixir-vueify": "^1.0.3",
+    "notify-send": "^0.1.2",
     "vue": "^1.0.28",
     "vue-hot-reload-api": "^1.3.2",
     "vue-html-loader": "^1.2.2",
